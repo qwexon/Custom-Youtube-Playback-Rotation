@@ -1,0 +1,247 @@
+.cys-root {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  vertical-align: top !important;
+  z-index: 64 !important;
+  box-sizing: border-box !important;
+}
+
+.cys-button {
+  appearance: none;
+  -moz-appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  font: 600 10px/1 Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cys-button-icon {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.cys-button-icon polygon {
+  transition: fill 150ms ease;
+}
+
+.cys-button[aria-expanded="true"] .cys-button-icon polygon {
+  fill: #fff !important;
+}
+
+.cys-button-speed {
+  position: absolute;
+  left: calc(50% + 3px);
+  top: 10px;
+  background: #8338ec;
+  /* Premium purple badge background */
+  color: #fff;
+  font-size: 8px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 1px 3px;
+  border-radius: 2px;
+  letter-spacing: -0.2px;
+  pointer-events: none;
+  text-align: center;
+  white-space: nowrap;
+  font-family: "Roboto", Arial, sans-serif;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 0px #3c096c;
+}
+
+.cys-menu {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 15px);
+  z-index: 63;
+  display: none;
+  width: 276px;
+  padding: 16px;
+  transform: translateX(calc(-50% + var(--cys-menu-shift, 0px)));
+  border-radius: 12px;
+  color: #eee;
+  background: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  font: 400 14px/1.4 Roboto, Arial, sans-serif;
+}
+
+.cys-menu-open {
+  display: block;
+}
+
+.cys-section+.cys-section {
+  margin-top: 14px;
+  padding-top: 14px;
+}
+
+.cys-section-title {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.cys-speed-grid,
+.cys-rotation-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.cys-menu-item,
+.cys-rotate-item,
+.cys-apply-button {
+  appearance: none;
+  -moz-appearance: none;
+  min-height: 36px;
+  border: 0;
+  border-radius: 8px;
+  color: #eee;
+  background: rgba(255, 255, 255, 0.1);
+  font: 400 14px/1 Roboto, Arial, sans-serif;
+  letter-spacing: 0;
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.cys-menu-item:hover,
+.cys-rotate-item:hover,
+.cys-apply-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.cys-active {
+  background: #fff !important;
+  color: #0f0f0f !important;
+  font-weight: 600;
+}
+
+.cys-custom-row {
+  display: grid;
+  grid-template-columns: auto 1fr 48px;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  margin-top: 10px;
+  padding: 4px 4px 4px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.cys-custom-label {
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.cys-speed-input {
+  appearance: textfield;
+  -moz-appearance: textfield;
+  min-width: 0;
+  height: 32px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 8px;
+  color: #eee;
+  background: transparent;
+  padding: 0 4px;
+  font: 400 14px/1 Roboto, Arial, sans-serif;
+  letter-spacing: 0;
+  outline: none;
+}
+
+.cys-speed-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.cys-speed-input::-webkit-inner-spin-button,
+.cys-speed-input::-webkit-outer-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.cys-apply-button {
+  min-height: 32px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.cys-apply-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.html5-main-video {
+  will-change: transform;
+}
+
+@media (max-width: 640px) {
+  .cys-root {
+    width: 42px !important;
+    min-width: 42px !important;
+  }
+
+  .cys-button-icon {
+    width: 21px;
+    height: 21px;
+  }
+
+  .cys-button-speed {
+    left: calc(50% + 1px);
+    top: 10px;
+    right: auto;
+    bottom: auto;
+    font-size: 7.5px;
+  }
+
+  .cys-menu {
+    bottom: calc(100% + 14px);
+    width: 248px;
+    padding: 14px;
+  }
+}
+
+/* Keep YouTube controls visible when custom speed menu is open */
+body.cys-menu-active .ytp-chrome-bottom,
+body.cys-menu-active .ytp-chrome-top {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+body.cys-menu-active .ytp-gradient-bottom,
+body.cys-menu-active .ytp-gradient-top {
+  opacity: 0 !important;
+  display: none !important;
+  visibility: hidden !important;
+}
+
+body.cys-menu-active .html5-video-player,
+body.cys-menu-active .html5-video-player * {
+  cursor: default !important;
+}
